@@ -5,7 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet1.css" media="screen" />
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
+
+
+    <script>
+    window.onload = function () {
+    
+    var map = L.map('map').setView([54.396, 18.57], 16);
+
+    L.tileLayer('http://{s}.tile.cloudmade.com/{key}/{styleId}/256/{z}/{x}/{y}.png', {
+    key: '5a881828637049759156899bef052424',
+    styleId: 123706
+    }).addTo(map);
+    
+    var marker = L.marker([54.396, 18.573]).addTo(map).bindPopup("Mat-Fiz-Inf").openPopup();
+
+    }
+    </script>
+
     <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
 
@@ -26,27 +45,15 @@
 
     <div id="content-wrapper">
       <div class="inner clearfix">
-        <section id="main-content">
-          <h3>
-          <a name="siemka" class="anchor" href="#siemka"><span class="octicon octicon-link"></span></a>Witaj na mojej stronie GitHub`a</h3>
 
-        <p>Nie ma tu nic ciekawego :( <br>
-        Są tylko zadania z tabelek.</p>
+        <section id="main-content">
+          <p>Zabawa leafletem</p>
+           <div id="map"></div>
+        
 
         </section>
-
-        <aside id="sidebar">
-          <a href="tabelki.html" class="button">Tabele</a>
-          <a href='mapka.html' class="button">Mapa</a>
-
-          <p class="repo-owner"><a href="https://github.com/matismatis93/techint"></a>Strona jest wspierana przez: <a href="https://github.com/matismatis93">matismatis93</a>.</p>
-
-          <p>Użyty motyw: "the Architect theme" <a href="https://twitter.com/jasonlong">Jasona Longa</a> z własnymi modyfikacjami.</p>
-        </aside>
       </div>
     </div>
-    <footer>Mateusz Michalski<br> Informatyka niestacjonana semestr IV </footer>
-    
 
   
   </body>
