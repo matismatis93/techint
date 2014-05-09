@@ -448,9 +448,10 @@ footer a:hover {
     color: #2879d0;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;                     
-    border-radius: 5px;    
+    border-radius: 5px;
   }
   header a.button small {
+    margin-right: 5px;
     font-size: 13px;
     display: inline;
   }
